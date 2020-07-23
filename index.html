@@ -6,8 +6,6 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>ORR Survey Dashboard</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -20,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 <link href="css/c3.css" rel="stylesheet">
-<link rel="stylesheet" href="css/simplebar.css" />
+
 
 <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
 <script src="https://kit.fontawesome.com/cfe8b4e9f5.js" crossorigin="anonymous"></script>
@@ -277,6 +275,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
+                                    <div id="supply-chart"></div>
                                     <div class="row">
 <div class="col-md-6">
                     <div id="buttons" class="card-deck counts">
@@ -400,7 +399,7 @@
 </div>
 
 
-    <div id="supply-chart"></div>
+
 
 
                                     <!-- Portfolio Modal - Text-->
@@ -427,8 +426,9 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
+
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Employment Impact</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -436,9 +436,22 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="" />
+                                    <div id="deck-2" class="card-deck counts">
+                                    <div class="card">
+  <center>
+    <div class="card-title">What percentage of your association's employees have been furloughed or laid off?</div>
+  </center>
+  <div id="alaid-chart"></div>
+</div>
+<div class="card">
+  <center>
+    <div class="card-title">What percentage of your members' employees have been furloughed or laid off?</div>
+  </center>
+  <div id="mlaid-chart"></div>
+</div>
+</div>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5"></p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -1079,7 +1092,7 @@
       }
       allCounts(all);
       supplychart.load({
-        unload: true,
+        unload: false,
         columns: [all.sp1, all.sp2, all.sp3, all.sp4, all.sp5],
       });
       alaidchart.load({
@@ -8649,7 +8662,7 @@
           normalize: true
         },
         columns: [t, all.layA1, all.layA2, all.layA3, all.layA4, all.layA5, all.layA6, all.layA7, all.layA8],
-        type: 'line',
+        type: 'donut',
         groups: [
           ['None', '1% to 10%', '11% to 20%', '21% to 30%', '31% to 40%', '41% to 50%', 'Over 50%', 'Do not know']
         ],
@@ -8687,7 +8700,7 @@
           normalize: true
         },
         columns: [t, all.layM1, all.layM2, all.layM3, all.layM4, all.layM5, all.layM6, all.layM7, all.layM8],
-        type: 'line',
+        type: 'donut',
         groups: [
           ['None', '1% to 10%', '11% to 20%', '21% to 30%', '31% to 40%', '41% to 50%', 'Over 50%', 'Do not know']
         ],
