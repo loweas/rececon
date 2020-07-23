@@ -229,11 +229,29 @@ label {
 
 button {
   border-radius: 0;
+  background: #2a4c7e;
+  color: #1abc9c;
+}
+
+button .card {
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons :hover {
+  background: #1abc9c;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+.icons {
+  justify-content: center;
+  align-items: center;
 }
 
 input,
@@ -539,12 +557,14 @@ pre code {
   overflow-y: scroll;
 }
 
+
 .container {
   width: 100%;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
+
 }
 @media (min-width: 576px) {
   .container {
@@ -1684,6 +1704,7 @@ pre code {
   margin-bottom: 1rem;
   color: #212529;
 }
+
 .table th,
 .table td {
   padding: 0.75rem;
@@ -4464,7 +4485,7 @@ input[type=button].btn-block {
 }
 @media (min-width: 576px) {
   .card-deck {
-    display: flex;
+    display: inline-grid;
     flex-flow: row wrap;
     margin-right: -1.5rem;
     margin-left: -1.5rem;
