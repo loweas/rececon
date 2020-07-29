@@ -1705,6 +1705,10 @@ pre code {
   color: #212529;
 }
 
+.c3-legend-item{
+  font-size: 12px;
+ position: 'inset'
+}
 .table th,
 .table td {
   padding: 0.75rem;
@@ -4400,6 +4404,10 @@ input[type=button].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+  color: #2a4c7e;
+  font-size: 16px;
+  margin-bottom: 0rem;
+  font-weight: bold;
 }
 
 .card-subtitle {
@@ -4481,14 +4489,8 @@ input[type=button].btn-block {
 }
 
 .card-deck .card {
-    background: #ffffff;
-    padding: 2px;
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-  }
-
+  margin-bottom: 1.5rem;
+}
 @media (min-width: 576px) {
   .card-deck {
     display: inline-grid;
