@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles0.css" rel="stylesheet" />
-    <link href="css/c3.css" rel="stylesheet" />
+  <link href="css/c3.css" rel="stylesheet" />
   <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
   <script src="https://kit.fontawesome.com/cfe8b4e9f5.js" crossorigin="anonymous"></script>
   <script src="js/d3.js"></script>
@@ -73,72 +73,245 @@
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
       <!-- Portfolio Section Heading-->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Affects on Outdoor Recreational Economy </h2>
+      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Affects on Outdoor Recreational Economy </h3>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
       </div>
-      <!-- Portfolio Grid Items-->
       <div class="row">
         <!-- Portfolio Item 1-->
         <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/supply.png.svg" alt="" />
+  <div class="card">
+    <center>
+      <div class="card-title">
+        *Number of Trade Assosciation <br>Employees
+      </div>
+      <p class="card-text"><span class="sum1"></span></p>
+    </center>
+  </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+  <div class="card">
+    <center>
+      <div class="card-title">
+        *Number of Member <br>Businesses
+      </div>
+      <p class="card-text"><span class="sum2"></span></p>
+    </center>
+
+    </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-5">
+
+  <div class="card">
+    <center>
+      <div class="card-title">
+        *Number of Member Business <br>Employees
+      </div>
+      <p class="card-text"><span class="sum3"></span></p>
+    </center>
+  </div>
+  </div>
+</div>
+<div class="row">
+  <!-- Portfolio Item 1-->
+  <div class="col-md-6 mb-5">
+<div class="card">
+<center>
+<div class="card-title">
+  *Association annual revenue (2019)
+</div>
+<p class="card-text"><span class="sum4"></span></p>
+</center>
+</div>
+</div>
+<div class="col-md-6 mb-5">
+<div class="card">
+<center>
+<div class="card-title">
+  *Industry annual revenue (2019)
+</div>
+<p class="card-text"><span class="sum5"></span></p>
+</center>
+
+</div>
+</div>
+
+</div>
+<center>
+<h2> Recreation by Industry </h2>
+</center>
+<div class="row">
+  <div class="col-sm">
+    <div id="buttons" class="card-deck counts">
+      <button id="all" class="card icons">
+        <center>
+          <i class="fas fa-users"></i>
+          <div class"buttuntext">
+            All
           </div>
+      </button>
+      </center>
+      <button id="fishing" class="card icons">
+        <center>
+          <i class="fas fa-fish"></i>
+          <div class"buttuntext">
+            Fishing
+          </div>
+        </center>
+      </button>
+      <button id="camping" class="card icons">
+        <center>
+          <i class="fas fa-campground"></i>
+          <div class"buttuntext ">
+                          Campgrounds + Hospitality
+                        </div>
+                      </center>
+                    </button>
+                  </div>
+                </div>
+                    <div class="col-sm">
+                      <div id="buttons" class="card-deck counts">
+                    <button id="hunting" class="card icons">
+            <center>
+              <i class="fas fa-binoculars"></i>
+              <div class"buttuntext">
+                Hunting
+              </div>
+            </center>
+      </button>
+
+      <button id="motor" class="card icons">
+        <center>
+          <i class="fas fa-shuttle-van"></i>
+          <div class"buttuntext">
+            Motor Vehicle
+          </div>
+
+        </center>
+      </button>
+
+      <button id="snow" class="card icons">
+        <center>
+          <i class="fas fa-skiing"></i>
+          <div class"buttuntext">
+            Snowsports
+          </div>
+        </center>
+      </button>
+    </div>
+  </div>
+
+  <div class="col-sm">
+    <div id="buttons" class="card-deck counts">
+      <button id="guides" class="card icons">
+        <center>
+          <i class="fas fa-hiking"></i>
+          <div class"buttuntext">
+            Guides + Outfitters
+          </div>
+        </center>
+      </button>
+      <button id="water" class="card icons">
+        <center>
+          <i class="fas fa-swimmer"></i>
+          <div class"buttuntext">
+            Water Sports
+          </div>
+        </center>
+      </button>
+
+
+    </div>
+  </div>
+      <div class="col-sm">
+        <div id="buttons" class="card-deck counts">
+
+
+
+
+      <button id="service" class="card icons">
+        <center>
+          <i class="fas fa-concierge-bell"></i>
+          <div class"buttuntext">
+            Service Providers
+          </div>
+        </center>
+      </button>
+      <button id="gear" class="card icons">
+        <center>
+          <i class="fas fa-compass"></i>
+          <div class"buttuntext">
+            Gear + Equipment
+          </div>
+        </center>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lets bring in the same graphs as before-->
+
+
+        <div class="card">
+          <center>
+            <div class="card-title">
+              Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?
+            </div>
+          </center>
+          <div id="supply-chart"></div>
         </div>
-        <!-- Portfolio Item 2-->
-        <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/employment.png.svg" alt="" />
-          </div>
+        <div class="row">
+          <div class="col-md">
+        <div class="card">
+          <center>
+            <div class="card-title">What percentage of your association's employees have been furloughed or laid off?</div>
+          </center>
+          <div id="alaid-chart"></div>
         </div>
-        <!-- Portfolio Item 3-->
-        <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="" />
-          </div>
+      </div>
+        <div class="col-md">
+        <div class="card">
+          <center>
+            <div class="card-title">What percentage of your members' employees have been furloughed or laid off?</div>
+          </center>
+          <div id="mlaid-chart"></div>
         </div>
-        <!-- Portfolio Item 4-->
-        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="" />
-          </div>
+</div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+      <div id="deck-4" class="card-deck counts">
+        <div class="card">
+          <center>
+            <div class="card-title">How have sales and revenue changed for your association AND for your members?</div>
+          </center>
+          <div id="total-chart"></div>
         </div>
-        <!-- Portfolio Item 5-->
-        <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="" />
-          </div>
-        </div>
-        <!-- Portfolio Item 6-->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="" />
-          </div>
+      </div>
+</div>
+
+  <div class="col-md">
+      <div id="deck-4" class="card-deck counts">
+        <div class="card">
+          <center>
+            <div class="card-title">How have budgets and expenses changed for your association AND for your members?</div>
+          </center>
+          <div id="budget-chart"></div>
         </div>
       </div>
     </div>
-
+  </div>
+<center>
+      <div id="deck-4" class="card-deck counts">
+        <div class="card">
+          <center>
+            <div class="card-title">How have employment needs changed for your association AND for your members?</div>
+          </center>
+          <div id="employ-chart"></div>
+        </div>
+      </div>
+    </center>
   </section>
   <!-- About Section-->
   <section class="page-section bg-primary text-white mb-0" id="about">
@@ -178,18 +351,7 @@
             experiences for generations to come.</p>
         </div>
       </div>
-      <!-- About Section Button-->
-      <!-- <div class="text-center mt-4">
-                                  <a class="btn btn-xl btn-outline-light" href="">
-                                      <i class="fas fa-download mr-2"></i>
-                                      Free Download!
-                                  </a>
-                              </div> -->
     </div>
-
-
-
-
   </section>
   <section>
     <div class="row">
@@ -330,8 +492,6 @@
           <h4 class="text-uppercase mb-4">About ORR</h4>
           <p class="lead mb-0">
             The Premier Coalition of Outdoor Recreation Trade Associations.
-
-
           </p>
         </div>
       </div>
@@ -345,388 +505,337 @@
   <div class="scroll-to-top d-lg-none position-fixed">
     <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
   </div>
-  <!-- Portfolio Modals-->
-  <!-- Portfolio Modal 1-->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Supply Chain and Distribution</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <div id="supply-chart"></div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div id="buttons" class="card-deck counts">
-                      <button id="all" class="card icons">
-                        <center>
-                          <i class="fas fa-users"></i>
-                          <div class"buttuntext">
-                            All
-                          </div>
-                      </button>
-                      </center>
-                      <button id="fishing" class="card icons">
-                        <center>
-                          <i class="fas fa-fish"></i>
-                          <div class"buttuntext">
-                            Fishing
-                          </div>
-                        </center>
-                      </button>
-                      <button id="camping" class="card icons">
-                        <center>
-                          <i class="fas fa-campground"></i>
-                          <div class"buttuntext ">
-                                          Campgrounds + Hospitality
-                                        </div>
-                                      </center>
-                                    </button>
-                                    <button id=" hunting" class="card icons">
-                            <center>
-                              <i class="fas fa-binoculars"></i>
-                              <div class"buttuntext">
-                                Hunting
-                              </div>
-                            </center>
-                      </button>
 
-                      <button id="motor" class="card icons">
-                        <center>
-                          <i class="fas fa-shuttle-van"></i>
-                          <div class"buttuntext">
-                            Motor Vehicle
-                          </div>
-
-                        </center>
-                      </button>
-
-                      <button id="snow" class="card icons">
-                        <center>
-                          <i class="fas fa-skiing"></i>
-                          <div class"buttuntext">
-                            Snowsports
-                          </div>
-                        </center>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div id="buttons" class="card-deck counts">
-                      <button id="volunteer" class="card icons">
-                        <center>
-                          <i class="fas fa-hard-hat"></i>
-                          <div class"buttuntext">
-                            Volunteer
-                          </div>
-                        </center>
-                      </button>
-                      <button id="water" class="card icons">
-                        <center>
-                          <i class="fas fa-swimmer"></i>
-                          <div class"buttuntext">
-                            Water Sports
-                          </div>
-                        </center>
-                      </button>
-
-                      <button id="gear" class="card icons">
-                        <center>
-                          <i class="fas fa-compass"></i>
-                          <div class"buttuntext">
-                            Gear + Equipment
-                          </div>
-                        </center>
-                      </button>
-                      <button id="guides" class="card icons">
-                        <center>
-                          <i class="fas fa-hiking"></i>
-                          <div class"buttuntext">
-                            Guides + Outfitters
-                          </div>
-                        </center>
-                      </button>
-
-                      <button id="manufacturer" class="card icons">
-                        <center>
-                          <i class="fas fa-industry"></i>
-                          <div class"buttuntext">
-                            Manufacturers
-                          </div>
-                        </center>
-                      </button>
-                      <button id="retail" class="card icons">
-                        <center>
-                          <i class="fas fa-tshirt"></i>
-                          <div class"buttuntext">
-                            Retailers
-                          </div>
-                        </center>
-                      </button>
-
-                      <button id="service" class="card icons">
-                        <center>
-                          <i class="fas fa-concierge-bell"></i>
-                          <div class"buttuntext">
-                            Service Providers
-                          </div>
-                        </center>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
-
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5">Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?</p>
-                <button class="btn btn-primary" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 2-->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Employment Impact</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <div id="deck-2" class="card-deck counts">
-                  <div class="card">
-                    <center>
-                      <div class="card-title">What percentage of your association's employees have been furloughed or laid off?</div>
-                    </center>
-                    <div id="alaid-chart"></div>
-                  </div>
-                  <div class="card">
-                    <center>
-                      <div class="card-title">What percentage of your members' employees have been furloughed or laid off?</div>
-                    </center>
-                    <div id="mlaid-chart"></div>
-                  </div>
-                </div>
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5"></p>
-                <button class="btn btn-primary" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 3-->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Circus Tent</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod
-                  consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 4-->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">Controller</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod
-                  consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 5-->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">Locked Safe</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod
-                  consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 6-->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal6Label">Submarine</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="" />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod
-                  consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <script>
   $(window).ready(function() {
     $('.loader').fadeOut("slow");
   });
-  
   var color4 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(4);
   var color5 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(5);
   var color6 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(6);
   var color7 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(7);
 
-  var supplychart;
 
-  Promise.all([
-    d3.csv('assets/salesAll.csv'),
-    d3.csv('assets/supply.csv'),
-    d3.csv('assets/alaid.csv'),
-    d3.csv('assets/employAll.csv'),
-    d3.csv('assets/budgetAll.csv'),
-    d3.csv('assets/mlaid.csv'),
-    d3.csv('assets/orr.csv'),
+  d3.csv('assets/orr8.csv',d3.autoType).then(function (datasets) {
+
+        $.fn.digits = function() {
+          return this.each(function() {
+            $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+          }) }
 
 
+        var empl = d3.nest()
+        .key(function(d) { return d.date=="Aug-20"})
+          .rollup(function(v) { return {
+            sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+            membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+            membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+            assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+            indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+          }; })
+        .entries(datasets);
 
-    </script>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+
+        $(".sum1").text(empl[1].value.sum1);
+        $(".sum2").text(empl[1].value.membus);
+        $(".sum3").text(empl[1].value.membusempl);
+        $(".sum4").text(empl[1].value.assrev);
+        $(".sum5").text(empl[1].value.indrev);
+        $("#deck-one > div:nth-child(1) > center > p > span").digits();
+        $("#deck-one > div:nth-child(2) > center > p > span").digits();
+        $("#deck-one > div:nth-child(3) > center > p > span").digits();
+        $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+  $("#all").on("click", function() {
+
+      var empl = d3.nest()
+        .key(function(d) { return d.date=="Aug-20"})
+          .rollup(function(v) { return {
+            sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+            membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+            membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+            assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+            indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+          }; })
+        .entries(datasets);
+
+        $(".sum1").text(empl[1].value.sum1);
+        $(".sum2").text(empl[1].value.membus);
+        $(".sum3").text(empl[1].value.membusempl);
+        $(".sum4").text(empl[1].value.assrev);
+        $(".sum5").text(empl[1].value.indrev);
+        $("#deck-one > div:nth-child(1) > center > p > span").digits();
+        $("#deck-one > div:nth-child(2) > center > p > span").digits();
+        $("#deck-one > div:nth-child(3) > center > p > span").digits();
+        $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+        })
+
+        $("#fishing").on("click", function() {
+
+              var empl = d3.nest()
+              .key(function(d) { return d.date=="Aug-20" && d.Tag == "Fishing"})
+
+                .rollup(function(v) { return {
+                  sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                  membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                  membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                  assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                  indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                }; })
+              .entries(datasets);
+
+              $(".sum1").text(empl[1].value.sum1);
+              $(".sum2").text(empl[1].value.membus);
+              $(".sum3").text(empl[1].value.membusempl);
+              $(".sum4").text(empl[1].value.assrev);
+              $(".sum5").text(empl[1].value.indrev);
+              $("#deck-one > div:nth-child(1) > center > p > span").digits();
+              $("#deck-one > div:nth-child(2) > center > p > span").digits();
+              $("#deck-one > div:nth-child(3) > center > p > span").digits();
+              $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+              })
+              $("#camping").on("click", function() {
+
+                    var empl = d3.nest()
+                    .key(function(d) { return d.date=="Aug-20" && d.Tag == "Campgrounds + Hospitality"})
+
+                      .rollup(function(v) { return {
+                        sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                        membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                        membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                        assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                        indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                      }; })
+                    .entries(datasets);
+
+                    $(".sum1").text(empl[1].value.sum1);
+                    $(".sum2").text(empl[1].value.membus);
+                    $(".sum3").text(empl[1].value.membusempl);
+                    $(".sum4").text(empl[1].value.assrev);
+                    $(".sum5").text(empl[1].value.indrev);
+                    $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                    $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                    $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                    $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                    })
+
+                    $("#hunting").on("click", function() {
+
+                          var empl = d3.nest()
+                          .key(function(d) { return d.date=="Aug-20" && d.Tag == "Hunting"})
+
+                            .rollup(function(v) { return {
+                              sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                              membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                              membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                              assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                              indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                            }; })
+                          .entries(datasets);
+
+                          $(".sum1").text(empl[0].value.sum1);
+                          $(".sum2").text(empl[0].value.membus);
+                          $(".sum3").text(empl[0].value.membusempl);
+                          $(".sum4").text(empl[0].value.assrev);
+                          $(".sum5").text(empl[0].value.indrev);
+                          $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                          $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                          $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                          $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                          })
+                          $("#snow").on("click", function() {
+
+                                var empl = d3.nest()
+                                .key(function(d) { return d.date=="Aug-20" && d.Tag == "Snowsports"})
+
+                                  .rollup(function(v) { return {
+                                    sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                                    membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                                    membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                                    assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                                    indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                                  }; })
+                                .entries(datasets);
+
+                                $(".sum1").text(empl[1].value.sum1);
+                                $(".sum2").text(empl[1].value.membus);
+                                $(".sum3").text(empl[1].value.membusempl);
+                                $(".sum4").text(empl[1].value.assrev);
+                                $(".sum5").text(empl[1].value.indrev);
+                                $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                                $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                                $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                                $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                                })
+                                $("#water").on("click", function() {
+
+                                      var empl = d3.nest()
+                                      .key(function(d) { return d.date=="Aug-20" && d.Tag == "Water Sports"})
+
+                                        .rollup(function(v) { return {
+                                          sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                                          membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                                          membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                                          assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                                          indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                                        }; })
+                                      .entries(datasets);
+
+
+                                      $(".sum1").text(empl[1].value.sum1);
+                                      $(".sum2").text(empl[1].value.membus);
+                                      $(".sum3").text(empl[1].value.membusempl);
+                                      $(".sum4").text(empl[1].value.assrev);
+                                      $(".sum5").text(empl[1].value.indrev);
+                                      $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                                      $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                                      $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                                      $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                                      })
+                                      $("#gear").on("click", function() {
+
+                                            var empl = d3.nest()
+                                            .key(function(d) { return d.date=="Aug-20" && d.Tag == "Gear + Equipment"})
+
+                                              .rollup(function(v) { return {
+                                                sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                                                membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                                                membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                                                assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                                                indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                                              }; })
+                                            .entries(datasets);
+
+                                            $(".sum1").text(empl[1].value.sum1);
+                                            $(".sum2").text(empl[1].value.membus);
+                                            $(".sum3").text(empl[1].value.membusempl);
+                                            $(".sum4").text(empl[1].value.assrev);
+                                            $(".sum5").text(empl[1].value.indrev);
+                                            $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                                            $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                                            $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                                            $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                                            })
+                                            $("#guides").on("click", function() {
+
+                                                  var empl = d3.nest()
+                                                  .key(function(d) { return d.date=="Aug-20" && d.Tag == "Guides + Outfitters"})
+
+                                                    .rollup(function(v) { return {
+                                                      sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                                                      membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                                                      membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                                                      assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                                                      indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                                                    }; })
+                                                  .entries(datasets);
+
+
+                                                  $(".sum1").text(empl[1].value.sum1);
+                                                  $(".sum2").text(empl[1].value.membus);
+                                                  $(".sum3").text(empl[1].value.membusempl);
+                                                  $(".sum4").text(empl[1].value.assrev);
+                                                  $(".sum5").text(empl[1].value.indrev);
+                                                  $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                                                  $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                                                  $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                                                  $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                                                  })
+                                                  $("#motor").on("click", function() {
+
+                                                        var empl = d3.nest()
+                                                        .key(function(d) { return d.date=="Aug-20" && d.Tag == "Motor Vehicle"})
+
+                                                          .rollup(function(v) { return {
+                                                            sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                                                            membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                                                            membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                                                            assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                                                            indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                                                          }; })
+                                                        .entries(datasets);
+
+                                                        $(".sum1").text(empl[1].value.sum1);
+                                                        $(".sum2").text(empl[1].value.membus);
+                                                        $(".sum3").text(empl[1].value.membusempl);
+                                                        $(".sum4").text(empl[1].value.assrev);
+                                                        $(".sum5").text(empl[1].value.indrev);
+                                                        $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                                                        $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                                                        $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                                                        $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                                                        })
+                                                        $("#service").on("click", function() {
+
+                                                              var empl = d3.nest()
+                                                              .key(function(d) { return d.date=="Aug-20" && d.Tag == "Service Providers"})
+
+                                                                .rollup(function(v) { return {
+                                                                  sum1: d3.sum(v, function(d) { return d.Number_Association_Employees; }),
+                                                                  membus: d3.sum(v, function(d) { return d.Number_Member_Businesses; }),
+                                                                  membusempl: d3.sum(v, function(d) { return d.Number_Member_Business_Employees; }),
+                                                                  assrev: d3.sum(v, function(d) { return d.Association_annual_revenue; }),
+                                                                  indrev: d3.sum(v, function(d) { return d.Industry_annual_revenue; }),
+                                                                }; })
+                                                              .entries(datasets);
+
+                                                              $(".sum1").text(empl[1].value.sum1);
+                                                              $(".sum2").text(empl[1].value.membus);
+                                                              $(".sum3").text(empl[1].value.membusempl);
+                                                              $(".sum4").text(empl[1].value.assrev);
+                                                              $(".sum5").text(empl[1].value.indrev);
+                                                              $("#deck-one > div:nth-child(1) > center > p > span").digits();
+                                                              $("#deck-one > div:nth-child(2) > center > p > span").digits();
+                                                              $("#deck-one > div:nth-child(3) > center > p > span").digits();
+                                                              $("#supply-chart > svg > g:nth-child(2) > g.c3-axis.c3-axis-x > g > text").hide();
+
+
+                                                              })
+
+
+
+
+
+      });
+
+
+
+
+
+
+
+
+ </script>
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>

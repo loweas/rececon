@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles0.css" rel="stylesheet" />
+  <link href="css/c3.css" rel="stylesheet" />
   <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
   <script src="https://kit.fontawesome.com/cfe8b4e9f5.js" crossorigin="anonymous"></script>
   <script src="js/d3.js"></script>
@@ -72,13 +73,272 @@
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
       <!-- Portfolio Section Heading-->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Affects on Outdoor Recreational Economy </h2>
+      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Affects on Outdoor Recreational Economy </h3>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
       </div>
+      <div class="row">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-6 col-lg-4 mb-5">
+  <div class="card">
+    <center>
+      <div class="card-title">
+        *Number of Trade Assosciation <br>Employees
+      </div>
+      <p class="card-text"><span class="sum1"></span></p>
+    </center>
+  </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+  <div class="card">
+    <center>
+      <div class="card-title">
+        *Number of Member <br>Businesses
+      </div>
+      <p class="card-text"><span class="sum2"></span></p>
+    </center>
+
+    </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-5">
+
+  <div class="card">
+    <center>
+      <div class="card-title">
+        *Number of Member Business <br>Employees
+      </div>
+      <p class="card-text"><span class="sum3"></span></p>
+    </center>
+  </div>
+  </div>
+</div>
+<div class="row">
+  <!-- Portfolio Item 1-->
+  <div class="col-md-6 mb-5">
+<div class="card">
+<center>
+<div class="card-title">
+  *Association annual revenue (2019)
+</div>
+<p class="card-text"><span class="sum4"></span></p>
+</center>
+</div>
+</div>
+<div class="col-md-6 mb-5">
+<div class="card">
+<center>
+<div class="card-title">
+  *Industry annual revenue (2019)
+</div>
+<p class="card-text"><span class="sum5"></span></p>
+</center>
+
+</div>
+</div>
+
+</div>
+<center>
+<h2> Recreation by Industry </h2>
+</center>
+<div class="row">
+  <div class="col-sm">
+    <div id="buttons" class="card-deck counts">
+      <button id="all" class="card icons">
+        <center>
+          <i class="fas fa-users"></i>
+          <div class"buttuntext">
+            All
+          </div>
+      </button>
+      </center>
+      <button id="fishing" class="card icons">
+        <center>
+          <i class="fas fa-fish"></i>
+          <div class"buttuntext">
+            Fishing
+          </div>
+        </center>
+      </button>
+      <button id="camping" class="card icons">
+        <center>
+          <i class="fas fa-campground"></i>
+          <div class"buttuntext ">
+                          Campgrounds + Hospitality
+                        </div>
+                      </center>
+                    </button>
+                  </div>
+                </div>
+                    <div class="col-sm">
+                      <div id="buttons" class="card-deck counts">
+                    <button id=" hunting" class="card icons">
+            <center>
+              <i class="fas fa-binoculars"></i>
+              <div class"buttuntext">
+                Hunting
+              </div>
+            </center>
+      </button>
+
+      <button id="motor" class="card icons">
+        <center>
+          <i class="fas fa-shuttle-van"></i>
+          <div class"buttuntext">
+            Motor Vehicle
+          </div>
+
+        </center>
+      </button>
+
+      <button id="snow" class="card icons">
+        <center>
+          <i class="fas fa-skiing"></i>
+          <div class"buttuntext">
+            Snowsports
+          </div>
+        </center>
+      </button>
+    </div>
+  </div>
+
+  <div class="col-sm">
+    <div id="buttons" class="card-deck counts">
+      <button id="volunteer" class="card icons">
+        <center>
+          <i class="fas fa-hard-hat"></i>
+          <div class"buttuntext">
+            Volunteer
+          </div>
+        </center>
+      </button>
+      <button id="water" class="card icons">
+        <center>
+          <i class="fas fa-swimmer"></i>
+          <div class"buttuntext">
+            Water Sports
+          </div>
+        </center>
+      </button>
+
+      <button id="gear" class="card icons">
+        <center>
+          <i class="fas fa-compass"></i>
+          <div class"buttuntext">
+            Gear + Equipment
+          </div>
+        </center>
+      </button>
+    </div>
+  </div>
+      <div class="col-sm">
+        <div id="buttons" class="card-deck counts">
+      <button id="guides" class="card icons">
+        <center>
+          <i class="fas fa-hiking"></i>
+          <div class"buttuntext">
+            Guides + Outfitters
+          </div>
+        </center>
+      </button>
+
+      <button id="manufacturer" class="card icons">
+        <center>
+          <i class="fas fa-industry"></i>
+          <div class"buttuntext">
+            Manufacturers
+          </div>
+        </center>
+      </button>
+      <button id="retail" class="card icons">
+        <center>
+          <i class="fas fa-tshirt"></i>
+          <div class"buttuntext">
+            Retailers
+          </div>
+        </center>
+      </button>
+
+      <button id="service" class="card icons">
+        <center>
+          <i class="fas fa-concierge-bell"></i>
+          <div class"buttuntext">
+            Service Providers
+          </div>
+        </center>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lets bring in the same graphs as before-->
+
+
+        <div class="card">
+          <center>
+            <div class="card-title">
+              Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?
+            </div>
+          </center>
+          <div id="supply-chart"></div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+        <div class="card">
+          <center>
+            <div class="card-title">What percentage of your association's employees have been furloughed or laid off?</div>
+          </center>
+          <div id="alaid-chart"></div>
+        </div>
+      </div>
+        <div class="col-md">
+        <div class="card">
+          <center>
+            <div class="card-title">What percentage of your members' employees have been furloughed or laid off?</div>
+          </center>
+          <div id="mlaid-chart"></div>
+        </div>
+</div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+      <div id="deck-4" class="card-deck counts">
+        <div class="card">
+          <center>
+            <div class="card-title">How have sales and revenue changed for your association AND for your members?</div>
+          </center>
+          <div id="total-chart"></div>
+        </div>
+      </div>
+</div>
+
+  <div class="col-md">
+      <div id="deck-4" class="card-deck counts">
+        <div class="card">
+          <center>
+            <div class="card-title">How have budgets and expenses changed for your association AND for your members?</div>
+          </center>
+          <div id="budget-chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<center>
+      <div id="deck-4" class="card-deck counts">
+        <div class="card">
+          <center>
+            <div class="card-title">How have employment needs changed for your association AND for your members?</div>
+          </center>
+          <div id="employ-chart"></div>
+        </div>
+      </div>
+    </center>
+
+
+
+
+
+
       <!-- Portfolio Grid Items-->
       <div class="row">
         <!-- Portfolio Item 1-->
@@ -329,8 +589,6 @@
           <h4 class="text-uppercase mb-4">About ORR</h4>
           <p class="lead mb-0">
             The Premier Coalition of Outdoor Recreation Trade Associations.
-
-
           </p>
         </div>
       </div>
@@ -355,19 +613,21 @@
         <div class="modal-body text-center">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-8">
+              <div class="col-lg">
                 <!-- Portfolio Modal - Title-->
                 <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Supply Chain and Distribution</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
                 </div>
+                <!-- Portfolio Modal - Text-->
+                <h2> Question </h2>
+                <p class="mb-5">Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?</p>
                 <!-- Portfolio Modal - Image-->
-                <div id="supply-chart"></div>
+                <div id="supply-chart1"></div>
+                <h2> Recreation by Industry </h2>
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-sm">
                     <div id="buttons" class="card-deck counts">
                       <button id="all" class="card icons">
                         <center>
@@ -393,6 +653,10 @@
                                         </div>
                                       </center>
                                     </button>
+                                  </div>
+                                </div>
+                                    <div class="col-sm">
+                                      <div id="buttons" class="card-deck counts">
                                     <button id=" hunting" class="card icons">
                             <center>
                               <i class="fas fa-binoculars"></i>
@@ -423,7 +687,7 @@
                     </div>
                   </div>
 
-                  <div class="col-md-6">
+                  <div class="col-sm">
                     <div id="buttons" class="card-deck counts">
                       <button id="volunteer" class="card icons">
                         <center>
@@ -450,6 +714,10 @@
                           </div>
                         </center>
                       </button>
+                    </div>
+                  </div>
+                      <div class="col-sm">
+                        <div id="buttons" class="card-deck counts">
                       <button id="guides" class="card icons">
                         <center>
                           <i class="fas fa-hiking"></i>
@@ -487,13 +755,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
-
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-5">Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?</p>
                 <button class="btn btn-primary" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -715,7 +976,7 @@
       d3.csv('assets/budgetAll.csv'),
       d3.csv('assets/mlaid.csv'),
       d3.csv('assets/orr.csv'),
-      // d3.json("assets/virusWashingtonMin.geojson")
+
     ]).then(function(datasets) {
 
       $.fn.digits = function() {
@@ -8707,9 +8968,11 @@
 
 
       supplychart = c3.generate({
-        // size: {
-        //   width: 350,
-        // },
+
+         padding:{
+           right: 50,
+           top: 50,
+         },
         data: {
           x: "t",
           stack: {
@@ -8746,6 +9009,51 @@
           grouped: false,
         },
         bindto: "#supply-chart"
+      });
+      supplychart1 = c3.generate({
+        size: {
+          width: 600,
+          },
+         padding:{
+           right: 50,
+           top: 50,
+         },
+        data: {
+          x: "t",
+          stack: {
+            normalize: true
+          },
+          columns: [t, all.sp1, all.sp2, all.sp3, all.sp4, all.sp5],
+          type: 'line',
+          // labels: true,
+          groups: [
+            ['Yes, significantly', 'Yes, but not significantly', 'No, but future changes possible', 'No, supply chain/distribution are unchanged', 'No Answer']
+          ],
+          order: null // stack order by data definition.
+        },
+        color: {
+          pattern: [color4[0], color4[1], color4[2], color4[3], 'grey']
+        },
+        axis: {
+          x: {
+            type: "timeseries",
+            tick: {
+              format: "%b %Y",
+            }
+          },
+          rotated: false
+        },
+        tooltip: {
+          format: {
+            value: function(value, ratio, id) {
+              var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+              return format(ratio);
+            }
+          },
+          show: true,
+          grouped: false,
+        },
+        bindto: "#supply-chart1"
       });
 
       alaidchart = c3.generate({
@@ -8882,8 +9190,6 @@
       });
 
 
-
-
       var field = ["field"];
       var same = ["Same or similar"];
       var slightdec = ["Budget tightened, expenses slightly reduced"];
@@ -8966,12 +9272,7 @@
           },
           columns: [hiring, noChange, furlo, laidoff, closed, dnk],
           type: 'bar',
-          // labels: true,
-          groups: [
-            ['No change', 'We are hiring', 'Temporary furloughs', 'Laying off employees',
-              'Closed doors, laid off most or all staff', 'Do not know'
-            ]
-          ],
+
           order: null // stack order by data definition.
         },
         color: {
@@ -8982,7 +9283,7 @@
             type: "category",
             categories: ['compared to last month? (members)', 'compared to 1 year ago? (members)', 'compared to last month? (association)', 'compared to 1 year ago? (association)']
           },
-          rotated: true
+          rotated: false
         },
         tooltip: {
           format: {
