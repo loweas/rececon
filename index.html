@@ -311,16 +311,20 @@
           <center>
             <div class="card-title">
               Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?
-            </div>
+            </center>
 
+<div class="card">
+  <center>
             <p>Of the businesses this survey represents in August:</p>
               <p>91% are experiencing difficulty with production and distribution<br>
             48% experiencing significant impacts. </p>
 
             <p> Which is a decrease from our previous survey in May.</p>
 </center>
+</div>
           <div id="supply-chart"></div>
         </div>
+        
         <div class="row">
           <div class="col-md">
         <div class="card">
@@ -360,7 +364,7 @@
           <center>
             <div class="card-title">How have sales and revenue changed for your association AND for your members?</div>
           </center>
-          <p>*Reported in the number of associations</p>
+          <p>*Reported in the number of associations for August 2020</p>
           <div id="total-chart"></div>
 
         </div>
@@ -373,7 +377,7 @@
           <center>
             <div class="card-title">How have budgets and expenses changed for your association AND for your members?</div>
           </center>
-          <p>*Reported in the number of associations</p>
+          <p>*Reported in the number of associations for August 2020</p>
           <div id="budget-chart"></div>
         </div>
       </div>
@@ -607,11 +611,10 @@
           var sales5 = ["Down 75% or more"];
           var sales6 = ["Flat or up"];
           var sales7 = ["Do not know"];
-          var sales8 = ["Increase 75% or more"];
-          var sales9 = ["Increase 50% to 74%"];
+          var sales8 = ["Increase 10% or less"];
+          var sales9 = ["Increase 11% to 25%"];
           var sales10 = ["Increase 26% to 49%"];
-          var sales11 = ["Increase 11% to 25%"];
-          var sales12 = ["Increase 10% or less"];
+
 
           datasets[2].forEach(function(d) {
           sales1.push(+d["Down 10% or less"]);
@@ -621,12 +624,12 @@
           sales5.push(+d["Down 75% or more"]);
           sales6.push(+d["Flat or up"]);
           sales7.push(+d["Do not know"]);
-          sales8.push(+d["Increase 75% or more"]);
-          sales9.push(+d["Increase 50% to 74%"]);
-          sales10.push(+d["Increase 26% or 49%"]);
-          sales11.push(+d["Increase 11% or 25%"]);
-          sales12.push(+d["Increase 10% or less"]);
+          sales8.push(+d["Increase 10% or less"]);
+          sales9.push(+d["Increase 11% to 25%"]);
+          sales10.push(+d["Increase 26% to 49%"]);
+
                     });
+
 
           var budgets1 = ["Same or similar"];
           var budgets2 = ["Budget tightened, expenses slightly reduced"];
@@ -988,7 +991,7 @@ $("#all").on("click", function() {
                                                 var chart = c3.generate({
                                                       bindto: "#total-chart",
                                                       data: {
-                                                        columns: [ sales1,sales2,sales3,sales4,sales5,sales6,sales7,sales8,sales9,sales10,sales11,sales12 ],
+                                                        columns: [ sales1,sales2,sales3,sales4,sales5,sales6,sales7,sales8,sales9,sales10 ],
                                                         type: 'bar',
                                                         // labels: true,
 
