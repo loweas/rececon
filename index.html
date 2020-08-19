@@ -69,6 +69,45 @@
       <img class="masthead-avatar" src="/img/OSU.PNG" alt="" />
     </div>
   </header>
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <!-- About Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- About Section Content-->
+      <div class="row">
+        <div class="col-lg-4 ml-auto">
+          <center>
+        <i class="fas fa-chart-line fa-5x"></i>
+      </center>
+          <p class="lead">Just a few short months ago outdoor recreation was growing faster than almost any other industry, contributed over $778 billion to the U.S. economy and employed over 5.2 million Americans. Now, 79 percent of outdoor
+            businesses have had to lay off or furlough employees and 89 percent are seeing decreased revenue.</p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <center>
+          <i class="fas fa-head-side-mask fa-5x"></i>
+        </center>
+          <p class="lead">According to the US Census Bureau which measured Covid-19 impacts on small businesses, 75 percent of small business in our category are reporting large and negative effects. Overall, we have been hit 31 percent harder than
+            the national average, making us the second most affected sector in the country behind ‘food and accommodation’. - (U.S. Census Bureau Small Business Pulse Survey).</p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <center>
+          <i class="fas fa-bullhorn fa-5x"></i>
+        </center>
+          <p class="lead">Action is needed on smart policies and investments that will save
+            the outdoor recreation economy so this sector can do what it does
+            best – revitalize communities, create jobs, support healthy people,
+            improve quality of life and provide access to amazing outdoor
+            experiences for generations to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Portfolio Section-->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
@@ -273,7 +312,13 @@
             <div class="card-title">
               Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?
             </div>
-          </center>
+
+            <p>Of the businesses this survey represents in August:</p>
+              <p>91% are experiencing difficulty with production and distribution<br>
+            48% experiencing significant impacts. </p>
+
+            <p> Which is a decrease from our previous survey in May.</p>
+</center>
           <div id="supply-chart"></div>
         </div>
         <div class="row">
@@ -346,46 +391,7 @@
     </center>
   </section>
   <!-- About Section-->
-  <section class="page-section bg-primary text-white mb-0" id="about">
-    <div class="container">
-      <!-- About Section Heading-->
-      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-      <!-- Icon Divider-->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
-      </div>
-      <!-- About Section Content-->
-      <div class="row">
-        <div class="col-lg-4 ml-auto">
-          <center>
-        <i class="fas fa-chart-line fa-5x"></i>
-      </center>
-          <p class="lead">Just a few short months ago outdoor recreation was growing faster than almost any other industry, contributed over $778 billion to the U.S. economy and employed over 5.2 million Americans. Now, 79 percent of outdoor
-            businesses have had to lay off or furlough employees and 89 percent are seeing decreased revenue.</p>
-        </div>
-        <div class="col-lg-4 mr-auto">
-          <center>
-          <i class="fas fa-head-side-mask fa-5x"></i>
-        </center>
-          <p class="lead">According to the US Census Bureau which measured Covid-19 impacts on small businesses, 75 percent of small business in our category are reporting large and negative effects. Overall, we have been hit 31 percent harder than
-            the national average, making us the second most affected sector in the country behind ‘food and accommodation’. - (U.S. Census Bureau Small Business Pulse Survey).</p>
-        </div>
-        <div class="col-lg-4 mr-auto">
-          <center>
-          <i class="fas fa-bullhorn fa-5x"></i>
-        </center>
-          <p class="lead">Action is needed on smart policies and investments that will save
-            the outdoor recreation economy so this sector can do what it does
-            best – revitalize communities, create jobs, support healthy people,
-            improve quality of life and provide access to amazing outdoor
-            experiences for generations to come.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
+
     <div class="row">
       <div class="col-md-12"></div>
       <div class="container">
@@ -503,7 +509,7 @@
 
   Promise.all([
   d3.csv('assets/orr8.csv',d3.autoType),
-  d3.csv('assets/allq.csv',d3.autoType),
+  d3.csv('assets/allq1.csv',d3.autoType),
   d3.csv('assets/sales.csv',d3.autoType),
   d3.csv('assets/budgets.csv',d3.autoType),
   d3.csv('assets/employ.csv',d3.autoType),
@@ -561,22 +567,16 @@
          var supply4 = ["Yes, significantly"];
 
          var layoffAssoc1 = ["None"];
-         var layoffAssoc2 = ["1% to 10%"];
-         var layoffAssoc3 = ["11% to 20%"];
-         var layoffAssoc4 = ["21% to 30%"];
-         var layoffAssoc5 = ["31% to 40%"];
-         var layoffAssoc6 = ["41% to 50%"];
-         var layoffAssoc7 = ["Over 50%"];
-         var layoffAssoc8 = ["Do not know"];
+         var layoffAssoc2 = ["Less than 20%"];
+         var layoffAssoc3 = ["21% to 40%"];
+         var layoffAssoc4 = ["Over 40%"];
+         var layoffAssoc5 = ["Do not know"];
 
          var layoffmemb1 = ["None- Mem"];
-         var layoffmemb2 = ["1% to 10%- Mem"];
-         var layoffmemb3 = ["11% to 20%- Mem"];
-         var layoffmemb4 = ["21% to 30%- Mem"];
-         var layoffmemb5 = ["31% to 40%- Mem"];
-         var layoffmemb6 = ["41% to 50%- Mem"];
-         var layoffmemb7 = ["Over 50%- Mem"];
-         var layoffmemb8 = ["Do not know- Mem"];
+         var layoffmemb2 = ["Less than 20%- Mem"];
+         var layoffmemb3 = ["21% to 40%- Mem"];
+         var layoffmemb4 = ["Over 40%- Mem"];
+         var layoffmemb5 = ["Do not know- Mem"];
 
            datasets[1].forEach(function(d) {
            date.push(new Date(d["date"]));
@@ -587,22 +587,16 @@
            supply4.push(+d["Yes, significantly"]);
 
            layoffAssoc1.push(+d["None"]);
-           layoffAssoc2.push(+d["1% to 10%"]);
-           layoffAssoc3.push(+d["11% to 20%"]);
-           layoffAssoc4.push(+d["21% to 30%"]);
-           layoffAssoc5.push(+d["31% to 40%"]);
-           layoffAssoc6.push(+d["41% to 50%"]);
-           layoffAssoc7.push(+d["Over 50%"]);
-           layoffAssoc8.push(+d["Do not know"]);
+           layoffAssoc2.push(+d["Less than 20%"]);
+           layoffAssoc3.push(+d["21% to 40%"]);
+           layoffAssoc4.push(+d["Over 40%"]);
+           layoffAssoc5.push(+d["Do not know"]);
 
            layoffmemb1.push(+d["None- Mem"]);
-           layoffmemb2.push(+d["1% to 10%- Mem"]);
-           layoffmemb3.push(+d["11% to 20%- Mem"]);
-           layoffmemb4.push(+d["21% to 30%- Mem"]);
-           layoffmemb5.push(+d["31% to 40%- Mem"]);
-           layoffmemb6.push(+d["41% to 50%- Mem"]);
-           layoffmemb7.push(+d["Over 50%- Mem"]);
-           layoffmemb8.push(+d["Do not know- Mem"]);
+           layoffmemb2.push(+d["Less than 20%- Mem"]);
+           layoffmemb3.push(+d["21% to 40%- Mem"]);
+           layoffmemb4.push(+d["Over 40%- Mem"]);
+           layoffmemb5.push(+d["Do not know- Mem"]);
                      });
 
 
@@ -895,25 +889,22 @@ $("#all").on("click", function() {
                                                     stack: {
                                                       normalize: true
                                                     },
-                                                    columns: [date, layoffAssoc1, layoffAssoc2, layoffAssoc3, layoffAssoc4, layoffAssoc5, layoffAssoc6, layoffAssoc7, layoffAssoc8],
+                                                    columns: [date, layoffAssoc1, layoffAssoc2, layoffAssoc3, layoffAssoc4, layoffAssoc5],
                                                     types: {
                                                       'None': 'area-spline',
-                                                      '1% to 10%': 'area-spline',
-                                                      '11% to 20%':'area-spline',
-                                                      '21% to 30%':'area-spline',
-                                                      '31% to 40%':'area-spline',
-                                                      '41% to 50%':'area-spline',
-                                                      'Over 50%':'area-spline',
+                                                      'Less than 20%': 'area-spline',
+                                                      '21% to 40%':'area-spline',
+                                                      'Over 40%':'area-spline',
                                                       'Do not know':'area-spline'
 
                                                     },
                                                     groups: [
-                                                      ['None', '1% to 10%', '11% to 20%', '21% to 30%', '31% to 40%', '41% to 50%', 'Over 50%', 'Do not know']
-                                                    ],
-                                                    order: null // stack order by data definition.
+                                                      ['None', 'Less than 20%', '21% to 40%', 'Over 40%', 'Do not know']
+                                                    ]
+
                                                   },
                                                   color: {
-                                                    pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], color7[5], color7[6], 'grey']
+                                                    pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
                                                   },
                                                   axis: {
                                                     x: {
@@ -944,31 +935,28 @@ $("#all").on("click", function() {
                                                     data: {
                                                       x: "date",
                                                       stack: {
-                                                        normalize: true
+                                                        normalize: false
                                                       },
-                                                      columns: [date, layoffmemb1, layoffmemb2, layoffmemb3, layoffmemb4, layoffmemb5, layoffmemb6, layoffmemb7, layoffmemb8],
-                                                       types: {
-                                                         'None- Mem': 'area-spline',
-                                                         '1% to 10%- Mem': 'area-spline',
-                                                         '11% to 20%- Mem':'area-spline',
-                                                         '21% to 30%- Mem':'area-spline',
-                                                         '31% to 40%- Mem':'area-spline',
-                                                         '41% to 50%- Mem':'area-spline',
-                                                         'Over 50%- Mem':'area-spline',
-                                                         'Do not know- Mem':'area-spline'
-
-                                                       },
-                                                      groups: [
-                                                        ['None- Mem', '1% to 10%- Mem', '11% to 20%- Mem', '21% to 30%- Mem', '31% to 40%- Mem', '41% to 50%- Mem', 'Over 50%- Mem', 'Do not know- Mem']
-                                                      ],
+                                                      columns: [date, layoffmemb1, layoffmemb2, layoffmemb3, layoffmemb4, layoffmemb5],
+                                                      //  types: {
+                                                      //    'None- Mem': 'area-spline',
+                                                      //    'Less than 20%- Mem': 'area-spline',
+                                                      //    '21% to 40%- Mem':'area-spline',
+                                                      //    'Over 40%- Mem':'area-spline',
+                                                      //    'Do not know- Mem':'area-spline'
+                                                      //
+                                                      //  },
+                                                      // groups: [
+                                                      //   ['None- Mem', 'Less than 20%- Mem', '21% to 40%- Mem', 'Over 40%- Mem', 'Do not know- Mem']
+                                                      // ],
                                                       names: {
-                                                        'None- Mem': 'None', '1% to 10%- Mem':'1% to 10%', '11% to 20%- Mem':'11% to 20%', '21% to 30%- Mem':'21% to 30%', '31% to 40%- Mem':'31% to 40%', '41% to 50%- Mem':'41% to 50%', 'Over 50%- Mem':'Over 50%',
+                                                        'None- Mem': 'None', 'Less than 20%- Mem':'Less than 20%', '21% to 40%- Mem':'21% to 40%', 'Over 40%- Mem':'Over 40%',
                                                         'Do not know- Mem':'Do not know'
                                                       },
-                                                      order: null // stack order by data definition.
+
                                                     },
                                                     color: {
-                                                      pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], color7[5], color7[6], 'grey']
+                                                      pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
                                                     },
                                                     axis: {
                                                       x: {
@@ -977,15 +965,20 @@ $("#all").on("click", function() {
                                                             format: "%b %Y",
                                                           }
                                                         },
+                                                        y: {
+                                                          tick:{
+                                                            format: d3.format('.2%')
+                                                          }
+                                                        },
                                                         rotated: false
                                                       },
                                                       tooltip: {
-                                                        format: {
-                                                          value: function(value, ratio, id) {
-                                                            var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
-                                                            return format(ratio);
-                                                          }
-                                                        },
+                                                        // format: {
+                                                        //   value: function(value, ratio, id) {
+                                                        //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                        //     return format(ratio);
+                                                        //   }
+                                                        // },
                                                         show: true,
                                                         grouped: false,
                                                       },
