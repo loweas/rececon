@@ -240,7 +240,7 @@
 <div class="card-title">
   *Association annual revenue (2019)
 </div>
-<p class="card-text">$<span class="sum4"></span></p>
+<p class="card-text"><span class="sum4"></span></p>
 </center>
 </div>
 </div>
@@ -250,7 +250,7 @@
 <div class="card-title">
   *Industry annual revenue (2019)
 </div>
-<p class="card-text">$<span class="sum5"></span></p>
+<p class="card-text"><span class="sum5"></span></p>
 </center>
 
 </div>
@@ -315,7 +315,7 @@
           <center>
             <div class="card-title">How have sales and revenue changed for your association AND for your members?</div>
           </center>
-                    <p>*Reported in Number of Associations Experiencing Effect</p>
+          <p>*Reported in the number of associations</p>
           <div id="total-chart"></div>
 
         </div>
@@ -494,7 +494,7 @@
   var color4 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(4);
   var color5 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(5);
   var color6 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(6);
-  var color7 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(7);
+  var color7 = chroma.scale(['#5c8e53', '#2a4c7e','#8E535C']).mode('lch').colors(7);
   $.fn.digits = function() {
     return this.each(function() {
       $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
@@ -543,8 +543,8 @@
         $(".sum1").text(datasets[5][0].All);
         $(".sum2").text(datasets[5][1].All);
         $(".sum3").text(datasets[5][2].All);
-        $(".sum4").text(datasets[5][3].All);
-        $(".sum5").text(datasets[5][4].All);
+        $(".sum4").text("$" +datasets[5][3].All);
+        $(".sum5").text("$" +datasets[5][4].All);
         $("#deck-one > div:nth-child(1) > center > p > span").digits();
         $("#deck-one > div:nth-child(2) > center > p > span").digits();
         $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -660,12 +660,12 @@
           var emply6 = ["Do not know"];
 
           datasets[4].forEach(function(d) {
-                              emply1.push(+d["No change"]);
-                              emply2.push(+d["We are hiring"]);
-                              emply3.push(+d["Temporary furloughs"]);
-                              emply4.push(+d["Laying off employees"]);
-                              emply5.push(+d["Closed doors, laid off most or all staff"]);
-                              emply6.push(+d["Do not know"]);
+                      emply1.push(+d["No change"]);
+                      emply2.push(+d["We are hiring"]);
+                      emply3.push(+d["Temporary furloughs"]);
+                      emply4.push(+d["Laying off employees"]);
+                      emply5.push(+d["Closed doors, laid off most or all staff"]);
+                      emply6.push(+d["Do not know"]);
                                 });
 
 
@@ -695,8 +695,8 @@ $("#all").on("click", function() {
             $(".sum1").text(datasets[5][0].All);
             $(".sum2").text(datasets[5][1].All);
             $(".sum3").text(datasets[5][2].All);
-            $(".sum4").text(datasets[5][3].All);
-            $(".sum5").text(datasets[5][4].All);
+            $(".sum4").text("$" +datasets[5][3].All);
+            $(".sum5").text("$" +datasets[5][4].All);
             $("#deck-one > div:nth-child(1) > center > p > span").digits();
             $("#deck-one > div:nth-child(2) > center > p > span").digits();
             $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -729,8 +729,8 @@ $("#all").on("click", function() {
     $(".sum1").text(datasets[5][0].Fishing);
     $(".sum2").text(datasets[5][1].Fishing);
     $(".sum3").text(datasets[5][2].Fishing);
-    $(".sum4").text(datasets[5][3].Fishing);
-    $(".sum5").text(datasets[5][4].Fishing);
+    $(".sum4").text("$" + datasets[5][3].Fishing);
+    $(".sum5").text( datasets[5][4].Fishing);
               $("#deck-one > div:nth-child(1) > center > p > span").digits();
               $("#deck-one > div:nth-child(2) > center > p > span").digits();
               $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -741,8 +741,8 @@ $("#all").on("click", function() {
         $(".sum1").text(datasets[5][0].Camping);
         $(".sum2").text(datasets[5][1].Camping);
         $(".sum3").text(datasets[5][2].Camping);
-        $(".sum4").text(datasets[5][3].Camping);
-        $(".sum5").text(datasets[5][4].Camping);
+        $(".sum4").text("$" +datasets[5][3].Camping);
+        $(".sum5").text("$" +datasets[5][4].Camping);
                   $("#deck-one > div:nth-child(1) > center > p > span").digits();
                   $("#deck-one > div:nth-child(2) > center > p > span").digits();
                   $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -755,7 +755,7 @@ $("#all").on("click", function() {
         $(".sum1").text(datasets[5][0].Hunting);
         $(".sum2").text(datasets[5][1].Hunting);
         $(".sum3").text(datasets[5][2].Hunting);
-        $(".sum4").text(datasets[5][3].Hunting);
+        $(".sum4").text("$" +datasets[5][3].Hunting);
         $(".sum5").text(datasets[5][4].Hunting);
                    $("#deck-one > div:nth-child(1) > center > p > span").digits();
                    $("#deck-one > div:nth-child(2) > center > p > span").digits();
@@ -769,8 +769,8 @@ $("#all").on("click", function() {
         $(".sum1").text(datasets[5][0].Snow);
         $(".sum2").text(datasets[5][1].Snow);
         $(".sum3").text(datasets[5][2].Snow);
-        $(".sum4").text(datasets[5][3].Snow);
-        $(".sum5").text(datasets[5][4].Snow);
+        $(".sum4").text("$" +datasets[5][3].Snow);
+        $(".sum5").text("$" +datasets[5][4].Snow);
         $("#deck-one > div:nth-child(1) > center > p > span").digits();
         $("#deck-one > div:nth-child(2) > center > p > span").digits();
         $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -781,8 +781,8 @@ $("#all").on("click", function() {
         $(".sum1").text(datasets[5][0].Water);
         $(".sum2").text(datasets[5][1].Water);
         $(".sum3").text(datasets[5][2].Water);
-        $(".sum4").text(datasets[5][3].Water);
-        $(".sum5").text(datasets[5][4].Water);
+        $(".sum4").text("$" +datasets[5][3].Water);
+        $(".sum5").text("$" +datasets[5][4].Water);
                   $("#deck-one > div:nth-child(1) > center > p > span").digits();
                   $("#deck-one > div:nth-child(2) > center > p > span").digits();
                   $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -792,8 +792,8 @@ $("#all").on("click", function() {
         $(".sum1").text(datasets[5][0].Gear);
         $(".sum2").text(datasets[5][1].Gear);
         $(".sum3").text(datasets[5][2].Gear);
-        $(".sum4").text(datasets[5][3].Gear);
-        $(".sum5").text(datasets[5][4].Gear);
+        $(".sum4").text("$" +datasets[5][3].Gear);
+        $(".sum5").text("$" +datasets[5][4].Gear);
                   $("#deck-one > div:nth-child(1) > center > p > span").digits();
                   $("#deck-one > div:nth-child(2) > center > p > span").digits();
                   $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -805,8 +805,8 @@ $("#all").on("click", function() {
         $(".sum1").text(datasets[5][0].Guides);
         $(".sum2").text(datasets[5][1].Guides);
         $(".sum3").text(datasets[5][2].Guides);
-        $(".sum4").text(datasets[5][3].Guides);
-        $(".sum5").text(datasets[5][4].Guides);
+        $(".sum4").text("$" +datasets[5][3].Guides);
+        $(".sum5").text("$" +datasets[5][4].Guides);
             $("#deck-one > div:nth-child(1) > center > p > span").digits();
             $("#deck-one > div:nth-child(2) > center > p > span").digits();
             $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -820,8 +820,8 @@ $("#all").on("click", function() {
       $(".sum1").text(datasets[5][0].Motor);
       $(".sum2").text(datasets[5][1].Motor);
       $(".sum3").text(datasets[5][2].Motor);
-      $(".sum4").text(datasets[5][3].Motor);
-      $(".sum5").text(datasets[5][4].Motor);
+      $(".sum4").text("$" +datasets[5][3].Motor);
+      $(".sum5").text("$" +datasets[5][4].Motor);
             $("#deck-one > div:nth-child(1) > center > p > span").digits();
             $("#deck-one > div:nth-child(2) > center > p > span").digits();
             $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -831,8 +831,8 @@ $("#all").on("click", function() {
     $(".sum1").text(datasets[5][0].Service);
     $(".sum2").text(datasets[5][1].Service);
     $(".sum3").text(datasets[5][2].Service);
-    $(".sum4").text(datasets[5][3].Service);
-    $(".sum5").text(datasets[5][4].Service);
+    $(".sum4").text("$" +datasets[5][3].Service);
+    $(".sum5").text("$" +datasets[5][4].Service);
                   $("#deck-one > div:nth-child(1) > center > p > span").digits();
                   $("#deck-one > div:nth-child(2) > center > p > span").digits();
                   $("#deck-one > div:nth-child(3) > center > p > span").digits();
@@ -852,8 +852,14 @@ $("#all").on("click", function() {
                                                       normalize: true
                                                     },
                                                     columns: [date, supply1, supply2,supply3,supply4,supply5 ],
-                                                    type: 'line',
-                                                    // labels: true,
+                                                    types: {
+                                                      'Yes, significantly': 'area-spline',
+                                                      'Yes, but not significantly': 'area-spline',
+                                                      'No, but future changes possible':'area-spline',
+                                                      'No, supply chain/distribution are unchanged':'area-spline',
+                                                      'No Answer':'area-spline',
+
+                                                    },
                                                     groups: [
                                                       ['Yes, significantly', 'Yes, but not significantly', 'No, but future changes possible', 'No, supply chain/distribution are unchanged', 'No Answer']
                                                     ],
@@ -890,7 +896,17 @@ $("#all").on("click", function() {
                                                       normalize: true
                                                     },
                                                     columns: [date, layoffAssoc1, layoffAssoc2, layoffAssoc3, layoffAssoc4, layoffAssoc5, layoffAssoc6, layoffAssoc7, layoffAssoc8],
-                                                    type: 'line',
+                                                    types: {
+                                                      'None': 'area-spline',
+                                                      '1% to 10%': 'area-spline',
+                                                      '11% to 20%':'area-spline',
+                                                      '21% to 30%':'area-spline',
+                                                      '31% to 40%':'area-spline',
+                                                      '41% to 50%':'area-spline',
+                                                      'Over 50%':'area-spline',
+                                                      'Do not know':'area-spline'
+
+                                                    },
                                                     groups: [
                                                       ['None', '1% to 10%', '11% to 20%', '21% to 30%', '31% to 40%', '41% to 50%', 'Over 50%', 'Do not know']
                                                     ],
@@ -931,10 +947,24 @@ $("#all").on("click", function() {
                                                         normalize: true
                                                       },
                                                       columns: [date, layoffmemb1, layoffmemb2, layoffmemb3, layoffmemb4, layoffmemb5, layoffmemb6, layoffmemb7, layoffmemb8],
-                                                      type: 'line',
+                                                       types: {
+                                                         'None- Mem': 'area-spline',
+                                                         '1% to 10%- Mem': 'area-spline',
+                                                         '11% to 20%- Mem':'area-spline',
+                                                         '21% to 30%- Mem':'area-spline',
+                                                         '31% to 40%- Mem':'area-spline',
+                                                         '41% to 50%- Mem':'area-spline',
+                                                         'Over 50%- Mem':'area-spline',
+                                                         'Do not know- Mem':'area-spline'
+
+                                                       },
                                                       groups: [
                                                         ['None- Mem', '1% to 10%- Mem', '11% to 20%- Mem', '21% to 30%- Mem', '31% to 40%- Mem', '41% to 50%- Mem', 'Over 50%- Mem', 'Do not know- Mem']
                                                       ],
+                                                      names: {
+                                                        'None- Mem': 'None', '1% to 10%- Mem':'1% to 10%', '11% to 20%- Mem':'11% to 20%', '21% to 30%- Mem':'21% to 30%', '31% to 40%- Mem':'31% to 40%', '41% to 50%- Mem':'41% to 50%', 'Over 50%- Mem':'Over 50%',
+                                                        'Do not know- Mem':'Do not know'
+                                                      },
                                                       order: null // stack order by data definition.
                                                     },
                                                     color: {
@@ -1022,11 +1052,13 @@ $("#all").on("click", function() {
                                                                   ['Increasing', 6],
                                                                   ['Same', 3],
                                                               ],
+                                                              names: {
+                                                                'Decreasing': 'Decreasing Hiring',
+                                                                'Increasing': 'Increasing Hiring',
+                                                                'Same': 'Hiring has remained the Same'
 
+                                                              },
                                                               type : 'pie',
-                                                              onclick: function (d, i) { console.log("onclick", d, i); },
-                                                              onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                                                              onmouseout: function (d, i) { console.log("onmouseout", d, i); }
                                                           },
                                                           color: {
                                                             pattern: [color4[0], color4[1], color4[2]]
