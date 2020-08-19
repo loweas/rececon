@@ -4622,8 +4622,8 @@ personal-achievements-section{
   }
 
   .card > hr {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 1;
+    margin-left: 1;
   }
 
   .card > .list-group:first-child .list-group-item:first-child {
