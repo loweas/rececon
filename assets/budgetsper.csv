@@ -1,0 +1,5 @@
+Question,Same or similar,"Budget tightened, expenses slightly reduced","Budget tightened, expenses significantly reduced","Budget tightened, expenses increased",Both increased,Do not know,"Budget increased, expenses reduced"
+compared to last month? (association),0.260869565,0.347826087,0.217391304,0,0,0.086956522,0
+compared to last month? (members),0.130434783,0.173913043,0.130434783,0.217391304,0,0.217391304,0.043478261
+compared to 1 year ago?(members),0.086956522,0.217391304,0.304347826,0.173913043,0,0.130434783,0.043478261
+compared to 1 year ago? (association),0.086956522,0.304347826,0.52173913,0,0,0.086956522,0

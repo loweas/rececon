@@ -109,7 +109,7 @@
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
       <!-- Portfolio Section Heading-->
-      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Affects on Outdoor Recreational Economy </h3>
+      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Effects on Outdoor Recreation Economy </h3>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
@@ -351,8 +351,8 @@
                   <center>
                     <div class="card-title">What percentage of your members' employees have been furloughed or laid off?</div>
                   </center>
-                  <p> For our assocation's members, full-time non-seasonal mass lay-offs seem to be on average be decreasing.
-                  <p>*Note Aug-2020 Survey attempted to disintangle seasonal employment effects which changed previous question to specific non-seasonal employment.</p>
+                  <p> For our assocation's members, full-time non-seasonal mass lay-offs seem to be on average decreasing.
+                  <br><br><p>*Note in the Aug-2020 survey the question was changed to specify non-seasonal employment.</p>
                 </div>
                 <div class="col-md">
                   <div id="mlaid-chart"></div>
@@ -379,25 +379,38 @@
               </div>
               <div class="row">
                 <div class="col-md">
-                  <div id="deck-4" class="card-deck counts">
-                    <div class="card">
-                      <center>
-                        <div class="card-title">How have sales and revenue changed for your association AND for your members?</div>
-                      </center>
-                      <p>*Reported in the number of associations for August 2020</p>
                       <div id="total-chart"></div>
-                  </div>
-                </div>
               </div>
               <div class="col-md">
-                <div id="deck-4" class="card-deck counts">
-                  <div class="card">
-                    <center>
-                      <div class="card-title">How have budgets and expenses changed for your association AND for your members?</div>
-                    </center>
-                    <p>*Reported in the number of associations for August 2020</p>
+                <center>
+                  <div class="card-title">How have sales and revenue changed for your association AND for your members?</div>
+                </center><p>Assocations</p>
+                <ul>
+                <li>70% report a decrease in revenue </li>
+                <li>13% seeing a decrease of 50-75% or greater. </li>
+                <li>9% reporting an increase compared to one year ago. </li>
+              </ul><p>Members</p>
+              <ul>
+                <li>65% of outdoor industry businesses are experiencing a decrease in sales </li>
+                <li>17% seeing a decrease of 50-75% or greater</li>
+                 <li>22% of businesses are reporting in increase compared to one year ago. </li>
+               <ul>
+            </div>
+              </div>
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+              </div>
+              <div class="row">
+                <div class="col-md">
+                  <center>
+                    <div class="card-title">How have budgets and expenses changed for your association AND for your members?</div>
+                  </center>
+                  <p> Reports from our assocations and their members suggest over 50% are still experiencing a tighting of their budgets compared to last month and year.</br>
+                    <p> A small portion (4%) of members have reported an increase in budgets.</p>
+                  <p>*</p>
+                </div>
+              <div class="col-md">
                     <div id="budget-chart"></div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -535,8 +548,8 @@
   Promise.all([
   d3.csv('assets/orr8.csv',d3.autoType),
   d3.csv('assets/allq1.csv',d3.autoType),
-  d3.csv('assets/sales.csv',d3.autoType),
-  d3.csv('assets/budgets.csv',d3.autoType),
+  d3.csv('assets/salesper.csv',d3.autoType),
+  d3.csv('assets/budgetsper.csv',d3.autoType),
   d3.csv('assets/employ.csv',d3.autoType),
   d3.csv('assets/orr-1.csv',d3.autoType)
   ]).then(function(datasets) {
@@ -1022,6 +1035,11 @@ $("#all").on("click", function() {
                                                           type: "category",
                                                           categories: ['compared to last month? (members)', 'compared to 1 year ago? (members)', 'compared to last month? (association)', 'compared to 1 year ago? (association)']
                                                         },
+                                                        y: {
+                                                          tick: {
+                                                            format: d3.format(".2%")
+                                                          }
+                                                        },
                                                         rotated: true
                                                       },
                                                       tooltip: {
@@ -1048,6 +1066,11 @@ $("#all").on("click", function() {
                                                           x: {
                                                             type: "category",
                                                             categories: ['compared to last month? (members)', 'compared to 1 year ago? (members)', 'compared to last month? (association)', 'compared to 1 year ago? (association)']
+                                                          },
+                                                          y: {
+                                                            tick: {
+                                                              format: d3.format(".2%")
+                                                            }
                                                           },
                                                           rotated: true
                                                         },
