@@ -63,7 +63,7 @@
       </div>
       <!-- Masthead Subheading-->
       <p class="masthead-subheading font-weight-light mb-0">THE NATION'S LEADING COALITION OF OUTDOOR RECREATION TRADE ASSOCIATIONS</p>
-      <img class="masthead-avatar" src="/img/osu.png" alt="" />
+      <img class="masthead-avatar" src="/img/osu1.png" alt="" />
     </div>
   </header>
   <section class="page-section bg-primary text-white mb-0" id="about">
@@ -937,20 +937,20 @@ $("#all").on("click", function() {
                                                     data: {
                                                       x: "date",
                                                       stack: {
-                                                        normalize: false
+                                                        normalize: true
                                                       },
                                                       columns: [date, layoffmemb1, layoffmemb2, layoffmemb3, layoffmemb4, layoffmemb5],
-                                                      //  types: {
-                                                      //    'None- Mem': 'area-spline',
-                                                      //    'Less than 20%- Mem': 'area-spline',
-                                                      //    '21% to 40%- Mem':'area-spline',
-                                                      //    'Over 40%- Mem':'area-spline',
-                                                      //    'Do not know- Mem':'area-spline'
-                                                      //
-                                                      //  },
-                                                      // groups: [
-                                                      //   ['None- Mem', 'Less than 20%- Mem', '21% to 40%- Mem', 'Over 40%- Mem', 'Do not know- Mem']
-                                                      // ],
+                                                       types: {
+                                                         'None- Mem': 'area-spline',
+                                                         'Less than 20%- Mem': 'area-spline',
+                                                         '21% to 40%- Mem':'area-spline',
+                                                         'Over 40%- Mem':'area-spline',
+                                                         'Do not know- Mem':'area-spline'
+
+                                                       },
+                                                      groups: [
+                                                        ['None- Mem', 'Less than 20%- Mem', '21% to 40%- Mem', 'Over 40%- Mem', 'Do not know- Mem']
+                                                      ],
                                                       names: {
                                                         'None- Mem': 'None', 'Less than 20%- Mem':'Less than 20%', '21% to 40%- Mem':'21% to 40%', 'Over 40%- Mem':'Over 40%',
                                                         'Do not know- Mem':'Do not know'
@@ -967,20 +967,16 @@ $("#all").on("click", function() {
                                                             format: "%b %Y",
                                                           }
                                                         },
-                                                        y: {
-                                                          tick:{
-                                                            format: d3.format('.2%')
-                                                          }
-                                                        },
+
                                                         rotated: false
                                                       },
                                                       tooltip: {
-                                                        // format: {
-                                                        //   value: function(value, ratio, id) {
-                                                        //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
-                                                        //     return format(ratio);
-                                                        //   }
-                                                        // },
+                                                        format: {
+                                                          value: function(value, ratio, id) {
+                                                            var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                            return format(ratio);
+                                                          }
+                                                        },
                                                         show: true,
                                                         grouped: false,
                                                       },
