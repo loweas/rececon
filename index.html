@@ -424,6 +424,23 @@
                   </div>
                 </div>
               </center>
+
+              <center>
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                <div class="col-md">
+                    <center>
+                      <div class="card-title">How Assocations needs for employment <br>have changed when comparing the month <br>surveyed to last year's employment needs.</div>
+                    </center>
+                    <p> We can see that in August our assocations are reporting impoving<br> conditions in catogories such as an increase in hiring & no change at all <br>while temporary furloughs are decreasing. </p>
+                      Though we are still experiencing increasing laying offs <br>reported from our assocations when comparing to August of 2019.</p>
+                  </div>
+                    <div class="col-md">
+                    <div id="emp-time"></div>
+                  </div>
+            </div>
             </section>
   <!-- About Section-->
 
@@ -548,7 +565,8 @@
   d3.csv('assets/salesper.csv',d3.autoType),
   d3.csv('assets/budgetsper.csv',d3.autoType),
   d3.csv('assets/employ.csv',d3.autoType),
-  d3.csv('assets/orr-1.csv',d3.autoType)
+  d3.csv('assets/orr-1.csv',d3.autoType),
+  d3.csv('assets/emplyp.csv',d3.autoType)
   ]).then(function(datasets) {
         $.fn.digits = function() {
           return this.each(function() {
@@ -633,7 +651,7 @@
            layoffmemb4.push(+d["Over 40%- Mem"]);
            layoffmemb5.push(+d["Do not know- Mem"]);
                      });
-console.log(layoffmemb5)
+
 
           var sales1 = ["Down 10% or less"];
           var sales2 = ["Down 11% to 25%"];
@@ -694,9 +712,21 @@ console.log(layoffmemb5)
                       emply4.push(+d["Laying off employees"]);
                       emply5.push(+d["Closed doors, laid off most or all staff"]);
                       emply6.push(+d["Do not know"]);
-                                });
-
-
+              });
+              var employ1 = ["No change"];
+              var employ2 = ["We are hiring"];
+              var employ3 = ["Temporary furloughs"];
+              var employ4 = ["Laying off employees"];
+              var employ5 = ["Closed doors, laid off most or all staff"];
+              var employ6 = ["Do not know"];
+              datasets[6].forEach(function(d) {
+                          employ1.push(+d["No change"]);
+                          employ2.push(+d["We are hiring"]);
+                          employ3.push(+d["Temporary furloughs"]);
+                          employ4.push(+d["Laying off employees"]);
+                          employ5.push(+d["Closed doors, laid off most or all staff"]);
+                          employ6.push(+d["Do not know"]);
+                          });
 
 
 
@@ -1137,6 +1167,48 @@ $("#all").on("click", function() {
                                                       bindto: "#employ-chart"
                                                     });
 
+                                                    emptime = c3.generate({
+                                                      padding: {
+                                                        right: 20
+                                                      },
+                                                      data: {
+                                                        x: "date",
+                                                        stack: {
+                                                          normalize: true
+                                                        },
+                                                        columns: [date, employ1,employ2, employ3, employ4],
+
+                                                      },
+                                                      color: {
+                                                        pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
+                                                      },
+                                                      axis: {
+                                                        x: {
+                                                          type: "timeseries",
+                                                            tick: {
+                                                              format: "%b %Y",
+                                                            }
+                                                          },
+                                                          y : {
+                                                            tick: {
+                                                              format: d3.format(".2%")
+
+                                                            }
+                                                          },
+                                                          rotated: false
+                                                        },
+                                                        tooltip: {
+                                                          // format: {
+                                                          //   value: function(value, ratio, id) {
+                                                          //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                          //     return format(ratio);
+                                                          //   }
+                                                          // },
+                                                          show: true,
+                                                          grouped: false,
+                                                        },
+                                                        bindto: "#emp-time"
+                                                      });
 
 
 
