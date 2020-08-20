@@ -54,7 +54,7 @@
   <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
       <!-- Masthead Avatar Image-->
-      <img class="masthead-avatar mb-5" src="/img/ORR.PNG" alt="" />
+      <img class="masthead-avatar mb-5" src="/img/ORR.png" alt="" />
 
       <!-- Masthead Heading-->
       <h1 class="masthead-heading text-uppercase mb-0">ORR Survey Dashboard</h1>
@@ -66,7 +66,7 @@
       </div>
       <!-- Masthead Subheading-->
       <p class="masthead-subheading font-weight-light mb-0">THE NATION'S LEADING COALITION OF OUTDOOR RECREATION TRADE ASSOCIATIONS</p>
-      <img class="masthead-avatar" src="/img/OSU.PNG" alt="" />
+      <img class="masthead-avatar" src="/img/OSU.png" alt="" />
     </div>
   </header>
   <section class="page-section bg-primary text-white mb-0" id="about">
@@ -310,21 +310,23 @@
         <div class="card">
           <center>
             <div class="card-title">
-              Has the global coronavirus pandemic disrupted your industry's supply chain and/or distribution of product?
+              Has the global coronavirus pandemic disrupted your <br>industry's supply chain and/or distribution of product?
             </center>
+<center>
+<div class="card1">
 
-<div class="card">
-  <center>
-            <p>Of the businesses this survey represents in August:</p>
-              <p>91% are experiencing difficulty with production and distribution<br>
-            48% experiencing significant impacts. </p>
+            <h6>Of the businesses this survey represents in August:</h6>
+            <ul>
+              <li>91% are experiencing difficulty with production and distribution</li>
+            <li>48% experiencing significant impacts. </li>
+          </ul>
 
-            <p> Which is a decrease from our previous survey in May.</p>
-</center>
+            <p> **A decrease from our previous survey in May.**</p>
 </div>
+</center>
           <div id="supply-chart"></div>
         </div>
-        
+
         <div class="row">
           <div class="col-md">
         <div class="card">
@@ -602,7 +604,7 @@
            layoffmemb4.push(+d["Over 40%- Mem"]);
            layoffmemb5.push(+d["Do not know- Mem"]);
                      });
-
+console.log(layoffmemb5)
 
           var sales1 = ["Down 10% or less"];
           var sales2 = ["Down 11% to 25%"];
