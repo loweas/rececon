@@ -324,13 +324,7 @@
               <div class="col-md">
                     <div class="card-title">What percentage of your industry business’s employees have been furloughed or laid off?</div>
                   <br>
-                  <ul>
-                  <li> 47% of our member’s businesses have laid off or furloughed a portion of their workforce</li>
-                  <li> 36% of businesses are reporting they are hiring and more employees are needed</li>
 
-
-                    <p> * This is the first uptick in hiring reported amongst our membership since the start of the pandemic.* </p>
-                    </ul>
                 </div>
 
             </div>
@@ -341,7 +335,13 @@
               <div class="col-md">
                 <div class="card-title">How industry member's needs for employment have changed when comparing the month surveyed to last year's employment needs.</div><br>
             <p> Industry member's are increasing their hiring and temporary furloughs are decreasing when compared the previous suvey period.  </p>
+            <ul>
+            <li> 47% of our member’s businesses have laid off or furloughed a portion of their workforce</li>
+            <li> 36% of businesses are reporting they are hiring and more employees are needed</li>
 
+
+              <p> * This is the first uptick in hiring reported amongst our membership since the start of the pandemic.* </p>
+              </ul>
               </div>
               <div class="col-md">
                 <div id="empm-time"></div>
@@ -946,7 +946,7 @@ $("#all").on("click", function() {
                                                     y: {
                                                       label: '% responding associations ',
                                                       tick: {
-                                                        format: d3.format(".2%")
+                                                        format: d3.format(".0%")
                                                       }
 
                                                     }
@@ -1001,7 +1001,9 @@ $("#all").on("click", function() {
                                                         }
                                                       },
                                                       y: {
-                                                        label: '% responding associations '
+                                                        label: '% responding associations ',
+                                                    
+
                                                       },
 
 
@@ -1028,7 +1030,7 @@ $("#all").on("click", function() {
                                                       stack: {
                                                         normalize: true
                                                       },
-                                                      columns: [date, layoffmemb1, layoffmemb2, layoffmemb3, layoffmemb4, layoffmemb5],
+                                                      columns: [date, layoffmemb2, layoffmemb3, layoffmemb4],
                                                        types: {
                                                          'None- Mem': 'area-spline',
                                                          'Less than 20%- Mem': 'area-spline',
@@ -1037,9 +1039,9 @@ $("#all").on("click", function() {
                                                          'Do not know- Mem':'area-spline'
 
                                                        },
-                                                      groups: [
-                                                        ['None- Mem', 'Less than 20%- Mem', '21% to 40%- Mem', 'Over 40%- Mem', 'Do not know- Mem']
-                                                      ],
+                                                      // groups: [
+                                                      //   ['None- Mem', 'Less than 20%- Mem', '21% to 40%- Mem', 'Over 40%- Mem', 'Do not know- Mem']
+                                                      // ],
                                                       names: {
                                                         'None- Mem': 'None', 'Less than 20%- Mem':'Less than 20%', '21% to 40%- Mem':'21% to 40%', 'Over 40%- Mem':'Over 40%',
                                                         'Do not know- Mem':'Do not know'
@@ -1062,19 +1064,22 @@ $("#all").on("click", function() {
                                                           }
                                                         },
                                                         y: {
-                                                          label: '% responding associations '
+                                                          tick: {
+                                                            format: d3.format(".0%")
+                                                          }
                                                         },
+
 
                                                         rotated: false
                                                       },
 
                                                       tooltip: {
-                                                        format: {
-                                                          value: function(value, ratio, id) {
-                                                            var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
-                                                            return format(ratio);
-                                                          }
-                                                        },
+                                                        // format: {
+                                                        //   value: function(value, ratio, id) {
+                                                        //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                        //     return format(ratio);
+                                                        //   }
+                                                        // },
 
                                                       },
                                                       bindto: "#mlaid-chart"
@@ -1103,7 +1108,7 @@ $("#all").on("click", function() {
                                                         },
                                                         y: {
                                                           tick: {
-                                                            format: d3.format(".2%")
+                                                            format: d3.format(".0%")
                                                           }
                                                         },
                                                         rotated: true
@@ -1135,7 +1140,7 @@ $("#all").on("click", function() {
                                                           },
                                                           y: {
                                                             tick: {
-                                                              format: d3.format(".2%")
+                                                              format: d3.format(".0%")
                                                             }
                                                           },
                                                           rotated: true
@@ -1242,7 +1247,7 @@ $("#all").on("click", function() {
                                                               label: '% associations ',
 
                                                             tick: {
-                                                              format: d3.format(".2%")
+                                                              format: d3.format(".0%")
 
 
                                                             }
@@ -1275,7 +1280,7 @@ $("#all").on("click", function() {
                                                           stack: {
                                                             normalize: true
                                                           },
-                                                          columns: [date, employm1,employm2, employm3, employm4],
+                                                          columns: [date, employm1,employm2, employm3, employm4,employm5],
                                                           types: {
                                                                     'No change': 'spline',
                                                                     'We are hiring': 'area-spline',
@@ -1300,7 +1305,7 @@ $("#all").on("click", function() {
                                                                 label: '%  ',
 
                                                               tick: {
-                                                                format: d3.format(".2%")
+                                                                format: d3.format(".0%")
 
 
                                                               }
