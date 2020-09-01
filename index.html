@@ -338,19 +338,17 @@
 
             </div>
             <div class="row">
+              <div class="col-md">
+                <div class="card-title">How industry member's needs for employment have changed when comparing the month surveyed to last year's employment needs.</div><br>
+            <p> Industry member's are increasing their hiring and temporary furloughs are decreasing when compared the previous suvey period.  </p>
 
-            <div class="col">
-                <div class="card-title">What percentage of your trade association's employees have been furloughed or laid off?</div>
-                <ul>
-                <li> 46% of our trade associations businesses have laid off or furloughed a portion of their workforce</li>
-                <p>*This is a sustained level from our previous survey.*</p>
-            </div>
-            <div class="col-md">
+              </div>
+              <div class="col-md">
+                <div id="empm-time"></div>
+              </div>
 
-                <div id="alaid-chart"></div>
+              </div>
 
-            </div>
-          </div>
           <div class="divider-custom">
 
           </div>
@@ -419,9 +417,36 @@
                     <div id="employ-chart"></div>
                   </div>
                 </div> -->
+
                 <div class="divider-custom">
 
                 </div>
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                </div>
+                <center>
+                  <h3>Association Specific Results</h3>
+                </center>
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+
+                <div class="col">
+                    <div class="card-title">What percentage of your trade association's employees have been furloughed or laid off?</div>
+                    <ul>
+                    <li> 46% of our trade associations businesses have laid off or furloughed a portion of their workforce</li>
+                    <p>*This is a sustained level from our previous survey.*</p>
+                </div>
+                <div class="col-md">
+
+                    <div id="alaid-chart"></div>
+
+                </div>
+              </div>
+              <div class="divider-custom">
+
+              </div>
                 <div class="row">
                   <div class="col-md">
                   <div id="emp-time"></div>
@@ -529,7 +554,8 @@
   d3.csv('assets/budgetsper.csv',d3.autoType),
   d3.csv('assets/employ.csv',d3.autoType),
   d3.csv('assets/orr-1.csv',d3.autoType),
-  d3.csv('assets/emplyp.csv',d3.autoType)
+  d3.csv('assets/emplyp.csv',d3.autoType),
+  d3.csv('assets/emplymem.csv',d3.autoType)
   ]).then(function(datasets) {
         $.fn.digits = function() {
           return this.each(function() {
@@ -690,6 +716,20 @@
                           employ5.push(+d["Closed doors, laid off most or all staff"]);
                           employ6.push(+d["Do not know"]);
                           });
+                          var employm1 = ["No change"];
+                          var employm2 = ["We are hiring"];
+                          var employm3 = ["Temporary furloughs"];
+                          var employm4 = ["Laying off employees"];
+                          var employm5 = ["Closed doors, laid off most or all staff"];
+                          var employm6 = ["Do not know"];
+                          datasets[7].forEach(function(d) {
+                                      employm1.push(+d["No change"]);
+                                      employm2.push(+d["We are hiring"]);
+                                      employm3.push(+d["Temporary furloughs"]);
+                                      employm4.push(+d["Laying off employees"]);
+                                      employm5.push(+d["Closed doors, laid off most or all staff"]);
+                                      employm6.push(+d["Do not know"]);
+                                      });
 
 
 
@@ -872,18 +912,19 @@ $("#all").on("click", function() {
                                                     stack: {
                                                       normalize: true
                                                     },
-                                                    columns: [date, supply1, supply2,supply3,supply4,supply5 ],
+                                                    columns: [date, supply2,supply3,supply4 ],
+                                                    // ** supply4,supply5
                                                     types: {
                                                       'Yes, significantly': 'area-spline',
                                                       'Yes, but not significantly': 'area-spline',
-                                                      'No, but future changes possible':'area-spline',
-                                                      'No, supply chain/distribution are unchanged':'area-spline',
+                                                      'No, but future changes possible':'spline',
+                                                      'No, supply chain/distribution are unchanged':'spline',
                                                       'No Answer':'area-spline',
 
                                                     },
-                                                    groups: [
-                                                      ['Yes, significantly', 'Yes, but not significantly', 'No, but future changes possible', 'No, supply chain/distribution are unchanged', 'No Answer']
-                                                    ],
+                                                    // groups: [
+                                                    //   ['Yes, significantly', 'Yes, but not significantly', 'No, but future changes possible', 'No, supply chain/distribution are unchanged', 'No Answer']
+                                                    // ],
                                                   },
                                                   legend: {
                                                     show: false
@@ -903,18 +944,22 @@ $("#all").on("click", function() {
 
                                                     },
                                                     y: {
-                                                      label: '% responding associations '
+                                                      label: '% responding associations ',
+                                                      tick: {
+                                                        format: d3.format(".2%")
+                                                      }
+
                                                     }
 
                                                   },
                                                   tooltip: {
-                                                    format: {
-                                                      value: function (value, ratio, id) {
-                                                        var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
-                                                        return format(ratio);
-                                                      }
-
-                                                      }
+                                                    // format: {
+                                                    //   value: function (value, ratio, id) {
+                                                    //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                    //     return format(ratio);
+                                                    //   }
+                                                    //
+                                                    //   }
                                                     }
                                                 });
                                                 alaidchart = c3.generate({
@@ -958,6 +1003,8 @@ $("#all").on("click", function() {
                                                       y: {
                                                         label: '% responding associations '
                                                       },
+
+
                                                       rotated: false
                                                     },
                                                     tooltip: {
@@ -1192,8 +1239,11 @@ $("#all").on("click", function() {
                                                             }
                                                           },
                                                           y : {
+                                                              label: '% associations ',
+
                                                             tick: {
                                                               format: d3.format(".2%")
+
 
                                                             }
                                                           },
@@ -1216,6 +1266,63 @@ $("#all").on("click", function() {
                                                         bindto: "#emp-time"
                                                       });
 
+                                                      empmtime = c3.generate({
+                                                        padding: {
+                                                          right: 20
+                                                        },
+                                                        data: {
+                                                          x: "date",
+                                                          stack: {
+                                                            normalize: true
+                                                          },
+                                                          columns: [date, employm1,employm2, employm3, employm4],
+                                                          types: {
+                                                                    'No change': 'spline',
+                                                                    'We are hiring': 'area-spline',
+                                                                    'Temporary furloughs': 'area-spline',
+                                                                    'Laying off employees': 'spline',
+
+
+                                                                 }
+                                                        },
+                                                        color: {
+                                                          pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
+                                                        },
+                                                        axis: {
+                                                          x: {
+                                                            type: "timeseries",
+                                                            label: 'Month - Year',
+                                                              tick: {
+                                                                format: "%b %Y",
+                                                              }
+                                                            },
+                                                            y : {
+                                                                label: '%  ',
+
+                                                              tick: {
+                                                                format: d3.format(".2%")
+
+
+                                                              }
+                                                            },
+                                                            rotated: false
+                                                          },
+
+                                                          legend: {
+                                                            show: false
+                                                          },
+                                                          tooltip: {
+                                                            // format: {
+                                                            //   value: function(value, ratio, id) {
+                                                            //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                            //     return format(ratio);
+                                                            //   }
+                                                            // },
+                                                            show: true,
+                                                            grouped: true,
+                                                          },
+                                                          bindto: "#empm-time"
+                                                        });
 
 
 
