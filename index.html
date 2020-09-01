@@ -931,6 +931,10 @@ $("#all").on("click", function() {
                                                     ]
 
                                                   },
+
+                                                  legend: {
+                                                    show: false
+                                                  },
                                                   color: {
                                                     pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
                                                   },
@@ -982,6 +986,10 @@ $("#all").on("click", function() {
                                                       },
 
                                                     },
+
+                                                    legend: {
+                                                      show: false
+                                                    },
                                                     color: {
                                                       pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
                                                     },
@@ -1020,6 +1028,10 @@ $("#all").on("click", function() {
                                                         pattern: [color7[0], color7[1], color7[2], color7[3], color7[4],color7[5],color7[6], 'grey']
                                                       },
 
+                                                      legend: {
+                                                        show: false
+                                                      },
+
                                                       axis: {
                                                         x: {
                                                           type: "category",
@@ -1035,7 +1047,7 @@ $("#all").on("click", function() {
                                                       tooltip: {
 
                                                           show: true,
-                                                          grouped: false,
+                                                          grouped: true,
                                                         }
                                                     });
                                                     chart = c3.generate({
@@ -1064,10 +1076,14 @@ $("#all").on("click", function() {
                                                           },
                                                           rotated: true
                                                         },
+
+                                                        legend: {
+                                                          show: false
+                                                        },
                                                         tooltip: {
 
                                                           show: true,
-                                                          grouped: false,
+                                                          grouped: true,
                                                         },
                                                         bindto: "#budget-chart"
                                                       });
@@ -1087,8 +1103,9 @@ $("#all").on("click", function() {
                                                               type : 'pie',
                                                           },
                                                           legend: {
-                                                            position: 'right'
-                                                          },
+                                                              show: false
+                                                            },
+
                                                           color: {
                                                             pattern: [color4[0], color4[1], color4[2]]
                                                           },
@@ -1113,6 +1130,7 @@ $("#all").on("click", function() {
                                                       color: {
                                                         pattern: [color5[0], color5[1], color5[2], color5[3], color5[4], 'grey']
                                                       },
+
                                                       axis: {
                                                         x: {
                                                           type: "category",
@@ -1128,7 +1146,7 @@ $("#all").on("click", function() {
                                                           }
                                                         },
                                                         show: true,
-                                                        grouped: false,
+                                                        grouped: true,
                                                       },
                                                       bindto: "#employ-chart"
                                                     });
@@ -1163,6 +1181,10 @@ $("#all").on("click", function() {
                                                           },
                                                           rotated: false
                                                         },
+
+                                                        legend: {
+                                                          show: false
+                                                        },
                                                         tooltip: {
                                                           // format: {
                                                           //   value: function(value, ratio, id) {
@@ -1171,7 +1193,7 @@ $("#all").on("click", function() {
                                                           //   }
                                                           // },
                                                           show: true,
-                                                          grouped: false,
+                                                          grouped: true,
                                                         },
                                                         bindto: "#emp-time"
                                                       });
