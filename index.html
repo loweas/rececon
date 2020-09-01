@@ -318,6 +318,9 @@
 
           </div>
           <div class="row">
+            <div class="col-md">
+              <div id="mlaid-chart"></div>
+            </div>
               <div class="col-md">
                     <div class="card-title">What percentage of your industry business’s employees have been furloughed or laid off?</div>
                   <br>
@@ -329,24 +332,23 @@
                     <p> * This is the first uptick in hiring reported amongst our membership since the start of the pandemic.* </p>
                     </ul>
                 </div>
-                <div class="col-md">
-                  <div id="mlaid-chart"></div>
-                </div>
+
             </div>
             <div class="divider-custom">
 
             </div>
             <div class="row">
-              <div class="col-md">
 
-                  <div id="alaid-chart"></div>
-
-              </div>
             <div class="col">
                 <div class="card-title">What percentage of your trade association's employees have been furloughed or laid off?</div>
                 <ul>
                 <li> 46% of our trade associations businesses have laid off or furloughed a portion of their workforce</li>
                 <p>*This is a sustained level from our previous survey.*</p>
+            </div>
+            <div class="col-md">
+
+                <div id="alaid-chart"></div>
+
             </div>
           </div>
           <div class="divider-custom">
@@ -355,7 +357,7 @@
 
               <center>
                 <div id="deck-4" class="card-deck counts">
-                
+
                     <center>
                       <div class="card-title">83% of ORR’s Members Depend on Seasonal Employment</div>
                       <p> Covid-19 impacts on seasonal hiring: </p>
@@ -892,10 +894,17 @@ $("#all").on("click", function() {
                                                   axis: {
                                                     x: {
                                                       type: 'timeseries',
+                                                      label: 'Month - Year',
                                                       tick: {
-                                                        format: '%b-%Y'
-                                                      }
+                                                        format: '%b-%Y',
+
+                                                      },
+
+
                                                     },
+                                                    y: {
+                                                      label: '% responding associations '
+                                                    }
 
                                                   },
                                                   tooltip: {
@@ -941,9 +950,13 @@ $("#all").on("click", function() {
                                                   axis: {
                                                     x: {
                                                       type: "timeseries",
+                                                      label: 'Month - Year',
                                                         tick: {
                                                           format: "%b %Y",
                                                         }
+                                                      },
+                                                      y: {
+                                                        label: '% responding associations '
                                                       },
                                                       rotated: false
                                                     },
@@ -996,9 +1009,13 @@ $("#all").on("click", function() {
                                                     axis: {
                                                       x: {
                                                         type: "timeseries",
+                                                        label: 'Month - Year',
                                                           tick: {
                                                             format: "%b %Y",
                                                           }
+                                                        },
+                                                        y: {
+                                                          label: '% responding associations '
                                                         },
 
                                                         rotated: false
@@ -1169,6 +1186,7 @@ $("#all").on("click", function() {
                                                       axis: {
                                                         x: {
                                                           type: "timeseries",
+                                                          label: 'Month - Year',
                                                             tick: {
                                                               format: "%b %Y",
                                                             }
