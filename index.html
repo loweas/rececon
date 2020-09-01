@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
+  <meta name="description" content="Ashley Lowe and Benji Antolin" />
   <meta name="author" content="" />
   <title>ORR Survey Dashboard</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -110,7 +110,7 @@
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
       <!-- Portfolio Section Heading-->
-      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Effects on Outdoor Recreation Economy </h3>
+      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Data on Covid-19 Effects by Industry  </h3>
       <!-- Icon Divider-->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
@@ -297,7 +297,7 @@
         <div class="divider-custom-line"></div>
       </div>
       <center>
-        <h3>Industry Workfource Survey</h3>
+        <h3>Workforce Survey Results</h3>
       </center>
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
@@ -349,6 +349,7 @@
               </div>
             <div class="col">
                 <div class="card-title">What percentage of your trade association's employees have been furloughed or laid off?</div>
+                <p> _% of trade associations have laid off ___ (lindsey)</p>
             </div>
           </div>
           <div class="divider-custom">
@@ -427,7 +428,7 @@
                   <div id="emp-time"></div>
                 </div>
                 <div class="col-md">
-                    <div class="card-title">How our assocations needs for employment have changed when comparing the month surveyed to last year's employment needs.</div>
+                    <div class="card-title">How trade assocations needs for employment have changed when comparing the month surveyed to last year's employment needs.</div>
                 <p> Trade associations are reporting improving conditions with an increase in hiring while temporary furloughs are decreasing compared to May, however there is still an increase in layoffs compared to this time last year. </p>
               </div>
               </div>
@@ -650,7 +651,7 @@
           var sales3 = ["Down 26% to 49%"];
           var sales4 = ["Down 50% to 74%"];
           var sales5 = ["Down 75% or more"];
-          var sales6 = ["Flat or up"];
+          var sales6 = ["Flat"];
           var sales7 = ["Do not know"];
           var sales8 = ["Increase 10% or less"];
           var sales9 = ["Increase 11% to 25%"];
@@ -663,7 +664,7 @@
           sales3.push(+d["Down 26% to 49%"]);
           sales4.push(+d["Down 50% to 74%"]);
           sales5.push(+d["Down 75% or more"]);
-          sales6.push(+d["Flat or up"]);
+          sales6.push(+d["Flat"]);
           sales7.push(+d["Do not know"]);
           sales8.push(+d["Increase 10% or less"]);
           sales9.push(+d["Increase 11% to 25%"]);
@@ -1024,6 +1025,9 @@ $("#all").on("click", function() {
 
                                                         rotated: false
                                                       },
+                                                      legend: {
+                                                        position: 'center'
+                                                      },
                                                       tooltip: {
                                                         format: {
                                                           value: function(value, ratio, id) {
@@ -1052,7 +1056,7 @@ $("#all").on("click", function() {
                                                       axis: {
                                                         x: {
                                                           type: "category",
-                                                          categories: ['compared to last month? (members)', 'compared to 1 year ago? (members)', 'compared to last month? (association)', 'compared to 1 year ago? (association)']
+                                                          categories: ['compared to last month? (industry businesses)', 'compared to 1 year ago? (industry businesses)', 'compared to last month? (trade association)', 'compared to 1 year ago? (trade association)']
                                                         },
                                                         y: {
                                                           tick: {
@@ -1084,7 +1088,7 @@ $("#all").on("click", function() {
                                                         axis: {
                                                           x: {
                                                             type: "category",
-                                                            categories: ['compared to last month? (members)', 'compared to 1 year ago? (members)', 'compared to last month? (association)', 'compared to 1 year ago? (association)']
+                                                            categories: ['compared to last month? (industry businesses)', 'compared to 1 year ago? (industry businesses)', 'compared to last month? (trade association)', 'compared to 1 year ago? (trade association)']
                                                           },
                                                           y: {
                                                             tick: {
@@ -1142,7 +1146,7 @@ $("#all").on("click", function() {
                                                       axis: {
                                                         x: {
                                                           type: "category",
-                                                          categories: ['compared to last month? (members)', 'compared to 1 year ago? (members)', 'compared to last month? (association)', 'compared to 1 year ago? (association)']
+                                                          categories: ['compared to last month? (industry businesses)', 'compared to 1 year ago? (industry businesses)', 'compared to last month? (trade association)', 'compared to 1 year ago? (trade association)']
                                                         },
                                                         rotated: true
                                                       },
