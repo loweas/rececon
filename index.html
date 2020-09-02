@@ -1001,9 +1001,9 @@ $("#all").on("click", function() {
                                                       'Do not know':'area-spline'
 
                                                     },
-                                                    groups: [
-                                                      ['None', 'Less than 20%', '21% to 40%', 'Over 40%', 'Do not know']
-                                                    ]
+                                                    // groups: [
+                                                    //   ['None', 'Less than 20%', '21% to 40%', 'Over 40%', 'Do not know']
+                                                    // ]
 
                                                   },
 
@@ -1023,6 +1023,9 @@ $("#all").on("click", function() {
                                                       },
                                                       y: {
                                                         label: '% responding assocations',
+                                                        tick: {
+                                                          format: d3.format(".0%")
+                                                        }
 
 
                                                       },
@@ -1031,12 +1034,12 @@ $("#all").on("click", function() {
                                                       rotated: false
                                                     },
                                                     tooltip: {
-                                                      format: {
-                                                        value: function(value, ratio, id) {
-                                                          var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
-                                                          return format(ratio);
-                                                        }
-                                                      },
+                                                      // format: {
+                                                      //   value: function(value, ratio, id) {
+                                                      //     var format = id === 'data1' ? d3.format(',') : d3.format('.2%');
+                                                      //     return format(ratio);
+                                                      //   }
+                                                      // },
 
                                                     },
                                                     bindto: "#alaid-chart"
@@ -1252,7 +1255,14 @@ $("#all").on("click", function() {
                                                           normalize: true
                                                         },
                                                         columns: [date, employ1,employ2, employ3, employ4],
+                                                        types: {
+                                                                  'No change': 'area-spline',
+                                                                  'We are hiring': 'area-spline',
+                                                                  'Temporary furloughs': 'area-spline',
+                                                                  'Laying off employees': 'area-spline',
 
+
+                                                               }
                                                       },
                                                       color: {
                                                         pattern: [color7[0], color7[1], color7[2], color7[3], color7[4], 'grey']
